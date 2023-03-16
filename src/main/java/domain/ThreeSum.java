@@ -5,6 +5,11 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ThreeSum {
+    private static int a[];
+
+    public static int[] getA() {
+        return a;
+    }
 
     public static int count(int[] a){ // Count triples that sum to 0.
         int N = a.length;
@@ -21,9 +26,10 @@ public class ThreeSum {
         System.out.println(test1());
     }
 
-    private static String test1() {
+    public static String test1() {
         String result = "1Mints.txt content..\n";
-        int a[] = null; //number array
+        a = new int[1000];
+//        int a[] = null; //number array
         try {
             Scanner file = new Scanner(new File("src/main/java/text/1Mints.txt"));
             StringBuilder sb = new StringBuilder();
@@ -31,7 +37,7 @@ public class ThreeSum {
                 sb.append(file.nextLine());
             }
             String numberStr[] = sb.toString().split("(\\s+)|(?=-)");
-            a = new int[1000];
+//            a = new int[1000];
             int index=0; int count=0;
             for (int i = 0; i < 1000; i++) {
                 if(numberStr[i].compareTo("")!=0){

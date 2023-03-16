@@ -20,4 +20,11 @@ public class Utility {
         return new DecimalFormat("###,###,###.##")
                 .format(value);
     }
+
+    public static void fill(int[] a) {
+        int n = a.length;
+        for (int i = 0; i < n; i++) {
+            a[i] = random(99);
+        }
+    }
 }
